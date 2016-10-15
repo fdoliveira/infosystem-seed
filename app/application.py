@@ -21,6 +21,10 @@ database.db.init_app(app)
 with app.app_context():
     database.db.create_all()
 
+    rows = system.subsystems['domain'].manager.count()
+    if (rows == 0):
+        init_data.do(system)
+
 for subsystem in system.subsystems.values():
     app.register_blueprint(subsystem)
 
