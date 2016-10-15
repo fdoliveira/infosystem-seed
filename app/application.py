@@ -6,7 +6,7 @@ from infosystem import database
 from flask import Flask
 from infosystem import system as system_module
 
-from orcomm import init_data
+from app import init_data
 
 
 app = Flask(__name__)
