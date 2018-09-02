@@ -1,2 +1,6 @@
 # System
-infosystem
+infosystem==0.1.41
+flask_sqlalchemy
+apscheduler
+flask-cors
+uwsgi

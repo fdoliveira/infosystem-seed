@@ -11,7 +11,7 @@ def do(system):
     user = system.subsystems['user'].manager.create(**user_data)
     role = system.subsystems['role'].manager.create(domain_id=domain.id, name='admin')
     system.subsystems['grant'].manager.create(user_id=user.id, role_id=role.id)
-    
+
     domain = system.subsystems['domain'].manager.create(name='objetorelacional.com.br')
     user_data = {'name': 'admin', 'email':'admin@example.com', 'password':'123456', 'domain_id': domain.id}
     user = system.subsystems['user'].manager.create(**user_data)

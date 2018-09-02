@@ -1,5 +1,9 @@
-import setuptools
+from setuptools import setup, find_packages
 
-setuptools.setup(
-    setup_requires=['pbr>=1.8'],
-    pbr=True)
+setup(
+    name="orlocal",
+    version="0.0.2",
+    summary='InfoSystem Seed',
+    description="InfoSystem Seed Flask REST service",
+    packages=find_packages(exclude=["tests"])
+)
